@@ -1,0 +1,28 @@
+<style>
+    body{
+        background-image: linear-gradient(to right bottom, #9cdbee, #75beca, #50a1a4, #2d847e, #086859);
+    }
+    span {
+        color: black;
+    }
+</style>
+<h2 style="color: #0e072e; font-size: 50px; text-align: center;">Weight Converter</h2> 
+<body>
+<p style="font-size: 35px; text-align: center;">Enter a value to convert :</p>  
+<p style="text-align: center">
+  <label style="text-align: center; font-size: 20px;">Kilograms</label>
+  <input id="Kilograms" type="number" placeholder="kilograms" 
+           oninput="kiloweightConvert(this.value)" 
+           onchange="kiloweightConvert(this.value)" style="text-align: center; font-size: 20px;" >
+           
+</p>
+<p style="font-size: 20px; position:relative; left:504px">
+Pounds: <span id="Pounds"></span><br>
+Grams: <span id="Grams"></span><br>  
+</p>
+<script>
+           function kiloweightConvert(value) {
+               document.getElementById("Pounds").innerHTML =value * 2.2046;
+               document.getElementById("Grams").innerHTML =value * 1000;
+           }
+</script>

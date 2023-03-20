@@ -1,0 +1,32 @@
+<style>
+    body {
+          background-image: linear-gradient(to right bottom, #9cdbee, #75beca, #50a1a4, #2d847e, #086859);
+          }  
+      span {
+          color: black;
+      }
+      p{
+        color: black;
+      }
+  </style>
+  <h2 style="color: #0e072e; font-size: 50px; text-align: center; font-family: 'Times New Roman';">Temperature Converter</h2> 
+  <body>
+  <title>Temperature Converter to Celcius and Kelvin</title>
+  <p style="font-size: 35px; text-align: center;">Enter a value to convert</p>
+  <p style="font-size: 35px; text-align: center;">
+  <label style="text-align: center; font-size: 20px;">Fahrenheit :</label>
+  <input id="inputFahrenheit" type="number" placeholder="Enter Temperature in Fahrenheit.." oninput="temperatureConverter(this.value)" 
+  onchange="temperatureConverter(this.value)"style="text-align: center; font-size: 20px;"></p>
+</p>
+<p style="font-size: 20px; position:relative; left: 516px;">
+    Celcius: <span id="outputCelcius"></span><br>
+    Kelvin: <span id="outputKelvin"></span></p>
+
+<script>
+function temperatureConverter(value) {
+  valNum = parseFloat(value);
+  document.getElementById("outputCelcius").innerHTML=(value-32)/1.8;
+  document.getElementById("outputKelvin").innerHTML=((valNum-32)/1.8)+273.15;
+}
+</script>
+</script>
